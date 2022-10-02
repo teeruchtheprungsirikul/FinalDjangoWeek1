@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+{% block title%}<title>Home | Teeruch.com</title>{%endblock%}
+{% block content%}
+<div class="container">
+    <h1>{{single_post.title}}</h1>
+    <p>{{single_post.short_description}}</p>
+    <p>{{single_post.content|safe}}</p>
+</div>
+{% endblock%}

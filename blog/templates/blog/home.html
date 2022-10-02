@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+{% block title%}<title>Home | Teeruch.com</title>{%endblock%}
+{% block content%}
+<div class="container">
+    {% for post in all_posts %}
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+                <img src ="{{post.featured_pic.url}}" "alt="{{post.title}}" class="img-fluid">             
+                <h5 class="card-title">{{post.title}}</h5>
+              <p class="card-text">{{post.short_description}}</p>
+              <a href="/blog/{{post.id}}" class="btn btn-primary">Click</a>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock%}
